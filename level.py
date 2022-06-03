@@ -7,7 +7,6 @@ from debug import debug
 class Level:
     def __init__(self):
 
-
         # get display surface
         self.displaySurface = pygame.display.get_surface()
 
