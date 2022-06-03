@@ -11,7 +11,7 @@ class Player(pygame.sprite.Sprite):
         self.rect = self.image.get_rect(topleft=pos)
 
         self.direction = pygame.math.Vector2()
-        self.speed = 5
+        self.speed = 4
 
         self.obstacle_sprites = obstacle_sprites
 
@@ -31,6 +31,7 @@ class Player(pygame.sprite.Sprite):
             self.direction.x = 0
         if self.direction.magnitude() != 0:
             self.direction = self.direction.normalize()
+
         self.rect.x += self.direction.x * self.speed
         self.collision('h')
         self.rect.y += self.direction.y * self.speed

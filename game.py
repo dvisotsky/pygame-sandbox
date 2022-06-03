@@ -1,10 +1,12 @@
-import pygame, sys
+import pygame
+import sys
 from settings import *
 from level import Level
 
-class Game: 
+
+class Game:
     def __init__(self):
-        #setup
+        # setup
         pygame.init()
         self.screen = pygame.display.set_mode((WIDTH, HEIGHT))
         self.clock = pygame.time.Clock()
@@ -17,10 +19,11 @@ class Game:
                 if event.type == pygame.QUIT:
                     pygame.quit()
                     sys.exit()
-                self.screen.fill('black')
-                self.level.run()
-                pygame.display.update()
-                self.clock.tick(FPS)
+            self.screen.fill('black')
+            self.level.run()
+            pygame.display.update()
+            self.clock.tick(FPS)
+
 
 if __name__ == '__main__':
     pygame.display.set_caption('gaem')
